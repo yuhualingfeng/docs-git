@@ -1,0 +1,12 @@
+1 安装git客户端
+  sudo apt-get install git
+
+2 生产一个SHH key
+  https://help.github.com/articles/generating-ssh-keys/
+
+3 git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+
+
+
+

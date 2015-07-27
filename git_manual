@@ -1,0 +1,98 @@
+
+git config --global user.name "John Doe"
+git config --global user.email "1135317965.qq.com"
+
+git config --global core.editor emacs
+git config --global merge.tool vimdiff
+
+git config --list
+git config user.name
+
+
+git help <verb>
+git <verb> --help
+example:git help config
+
+git add README
+git add .
+git commit -m "initial project version"
+
+git clone git://github.com/schacon/grit.git
+
+git diff
+git diff --cached
+
+git commit -a -m 'initial project version'
+
+
+git rm readme.md
+git rm --cached readme.md
+
+#文件移动(重命名)
+git mv README.md README
+
+#更新远程代码(method 1)
+git remote -v
+git fetch origin master
+git log -p master.. origin/master
+git merge origin/master
+
+#更新远程代码(method 1)
+git fetch origin master:temp
+git diff temp
+git merge temp
+git branch -d temp
+
+
+#查看提交历史
+git log
+git log -p -2
+git log --pretty=oneline
+git log --pretty=format:"%h - %an, %ar : %s"
+git log --since=2.weeks
+
+#修改最后一次提交
+git commit -m 'initial commit'
+git add forgotten_file
+git commit -amend
+
+#取消已暂存的文件
+git reset HEAD benchmarks.rb
+
+#取消对文件的修改
+git checkout -- benchmarks.rb
+
+git remote
+git remote -v
+
+git push origin master
+git remote show origin
+git pull 
+git remote rename pb paul
+git remote rm paul
+
+#标签
+git tag
+git tag -l 'v1.4.2.*'
+git tag -a v1.4 -m 'my version 1.4'
+git show v1.4
+git push origin v1.0.0
+git push origin --tags
+
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.last 'log -1 HEAD'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
