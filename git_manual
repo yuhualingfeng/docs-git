@@ -98,7 +98,7 @@ git fetch origin master:temp 同步远程的master分支到新建的temp分支
 git merge origin/master 合并master分支
 
 #存储用户名和密码
-git config --global credential.helper winstore
+git config --global credential.helper store
 
 
 
