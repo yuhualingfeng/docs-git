@@ -83,6 +83,23 @@ git config --global alias.st status
 git config --global alias.ci commit
 git config --global alias.last 'log -1 HEAD'
 
+#使用HTTPS协议clone的情况下保存用户名和密码
+git config --global credential.helper wincred
+
+
+#远程分支
+git fetch origin
+git remote add teamone
+git fetch teamone
+git push origin serverfix
+git push origin serverfix:serverfix
+git push origin serverfix:awesomebranch
+
+git merge origin/serverfix
+git checkout -b serverfix origin/serverfix
+git push origin :serverdix
+
+
 
 
 
