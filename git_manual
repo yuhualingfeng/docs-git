@@ -1,20 +1,23 @@
+1 配置用户参数
+	git config --global user.name "John Doe"
+	git config --global user.email "1135317965.qq.com"
+	git config --global core.editor emacs
+	git config --global merge.tool vimdiff
+2 查看配置参数
+	git config --list
+	git config user.name
 
-git config --global user.name "John Doe"
-git config --global user.email "1135317965.qq.com"
+3查看某条命令的帮助信息
+	git help <verb>
+	git <verb> --help
+	example:git help config
 
-git config --global core.editor emacs
-git config --global merge.tool vimdiff
-
-git config --list
-git config user.name
-
-
-git help <verb>
-git <verb> --help
-example:git help config
-
-git add README
+4将README文件添加到版本控制	
+	git add README
+5将所有
 git add .
+
+
 git commit -m "initial project version"
 
 git clone git://github.com/schacon/grit.git
@@ -82,6 +85,23 @@ git push origin --tags
 git config --global alias.st status
 git config --global alias.ci commit
 git config --global alias.last 'log -1 HEAD'
+
+#使用HTTPS协议clone的情况下保存用户名和密码
+git config --global credential.helper wincred
+
+
+#远程分支
+git fetch origin
+git remote add teamone
+git fetch teamone
+git push origin serverfix
+git push origin serverfix:serverfix
+git push origin serverfix:awesomebranch
+
+git merge origin/serverfix
+git checkout -b serverfix origin/serverfix
+git push origin :serverdix
+
 
 
 #分支
