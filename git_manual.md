@@ -3,18 +3,14 @@
 此命令用于查看或修改配置信息
 
 ```git
-git congfig --global user.name "puhuasheng"
+git config --global user.name "puhuasheng" // 配置用户名
+git config --global user.email "1135317965@qq.com" // 配置邮箱
+git config --global core.editor emacs // 配置编辑器
+git config --global merge.tool vimdiff // 配置合并工具
+git config --global credential.helper store // 保存用户名和密码 
+git config --list // 查看配置信息
 
 ```
-1 配置用户参数
-	git config --global user.name "John Doe"
-	git config --global user.email "1135317965.qq.com"
-	git config --global core.editor emacs
-	git config --global merge.tool vimdiff
-	git config --global credential.helper store   // 保存用户名和密码
-2 查看配置参数
-	git config --list
-	git config user.name
 
 3查看某条命令的帮助信息
 	git help <verb>
