@@ -3,6 +3,7 @@
 	git config --global user.email "1135317965.qq.com"
 	git config --global core.editor emacs
 	git config --global merge.tool vimdiff
+	git config --global credential.helper store   // 保存用户名和密码
 2 查看配置参数
 	git config --list
 	git config user.name
