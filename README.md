@@ -1,2 +1,2 @@
-# git-study
+# docs-git
 note and books of git   
