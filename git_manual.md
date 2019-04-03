@@ -143,7 +143,11 @@ git merge origin/master 合并master分支
 ```sh
 git config --global credential.helper store
 ```
-
+## 回滚到指定版本
+```sh
+git reset --hard 'commit_id'
+git push origin master --force
+```
 
 
 
