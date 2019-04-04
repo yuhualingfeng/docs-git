@@ -131,7 +131,7 @@ git push origin :serverfix 删除远程分支（非常无厘头）
 git branch -d serverfix 删除本地分支
 
 git checkout -b iss53 origin/master 从远程分支直接分化一个本地分支
-git push 
+git push origin iss53
 git pull 
 
 git fetch origin master  同步远程仓库
