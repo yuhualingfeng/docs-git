@@ -130,6 +130,13 @@ git merge origin/<remote-branch>
 ```sh
 git checkout -b <branch> origin/<remote-branch>
 ```
+### 查看关联的远程分支
+以下三条命令均可查看
+```sh
+git branch -vv
+git remote show origin
+cat .git/config
+```
 
 ## 本地分支
 ### 创建本地分支
