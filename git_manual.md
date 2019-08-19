@@ -108,40 +108,51 @@ git config --global credential.helper wincred
 
 
 ## 远程分支
+### 删除远程分支
 ```sh
-git fetch origin
-git remote add teamone
-git fetch teamone
-git push origin serverfix
-git push origin serverfix:serverfix
-git push origin serverfix:awesomebranch
-
-git merge origin/serverfix
-git checkout -b serverfix origin/serverfix
-git push origin :serverdix
+git push origin :<branch>
+```
+### 创建远程分支
+首先在本地创建分支（示例中是从master分支创建），然后推送到远程分支，<branch>和<remote-branch>一般命名一致.
+```sh
+git checkout -b <branch> master
+git push origin <branch>:<remote-branch>
+```
+### 关联远程分支
+```sh
+git branch --set-upstream-to=origin/<remote-branch> <branch>
+```
+### 合并远程分支
+```sh
+git merge origin/<remote-branch>
+```
+### 从远程分支分化一个本地分支
+```sh
+git checkout -b <branch> origin/<remote-branch>
 ```
 
-
-
-## 分支
+## 本地分支
+### 创建本地分支
 ```sh
-git fetch origin 同步远程服务器上的数据到本地
-git push origin serverfix  推送到远程仓库
-git push origin :serverfix 删除远程分支（非常无厘头）
-git branch -d serverfix 删除本地分支
-
-git checkout -b iss53 origin/master 从远程分支直接分化一个本地分支
-git push origin iss53
-git pull 
-
-git fetch origin master  同步远程仓库
-git fetch origin master:temp 同步远程的master分支到新建的temp分支
-git merge origin/master 合并master分支
+git checkout -b <branch> <exist-branch>
+```
+### 删除本地分支
+```sh
+git branch -d <branch>
+```
+### 删除本地分支
+```sh
+git branch -d <branch>
+```
+### 删除本地分支
+```sh
+git branch -d <branch>
 ```
 
 ## 存储用户名和密码
 ```sh
 git config --global credential.helper store
+git config --global credential.helper wincred
 ```
 ## 回滚到指定版本
 ```sh
