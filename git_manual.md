@@ -5,6 +5,7 @@
 	git config --global core.editor emacs
 	git config --global merge.tool vimdiff
 	git config --global credential.helper store   // 保存用户名和密码
+	git remote set-url origin http://node2.lenovo.cn/xxxxx.git  // 修改远端服务器路径
 ```
 
 ## 查看配置参数
@@ -28,6 +29,11 @@
 # 文件移动(重命名)
 ```sh
 git mv README.md README
+```
+
+# 查看执行过的命令
+```sh
+git reflog
 ```
 
 # 更新远程代码(method 1)
@@ -105,6 +111,10 @@ git config --global alias.last 'log -1 HEAD'
 ```sh
 git config --global credential.helper wincred
 ```
+## 清除保存的用户名和密码
+```
+git credential-manager uninstall
+```
 
 
 ## 远程分支
@@ -162,7 +172,9 @@ git config --global credential.helper store
 git config --global credential.helper wincred
 ```
 ## 回滚到指定版本
+`revert`是将工作区回滚到指定版本.`reset`是将HEAD指向指定版本
 ```sh
+git revert 'commit_id'
 git reset --hard 'commit_id'
 git push origin master --force
 ```
