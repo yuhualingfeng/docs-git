@@ -8,6 +8,10 @@
 	git remote set-url origin http://node2.lenovo.cn/xxxxx.git  // 修改远端服务器路径
 ```
 
+## 当前分支存在未提交的代码，然后希望切换其他分支做修改
++ 首先执行`git stash`,然后切换到其他分支修改并提交
++ 切换回当前分支,然后执行`git stash pop`
+
 ## 查看配置参数
 ```sh
 	git config --list
